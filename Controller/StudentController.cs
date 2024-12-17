@@ -1,8 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using bysprojee.Model;
+using bysprojee.Service;
+using Microsoft.AspNetCore.Mvc;
 
 
 namespace bysprojee.Controller
 {
+    [ApiController]
+    [Route("api/[controller]")]
    
 
     public class StudentController:ControllerBase

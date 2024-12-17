@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using bysprojee.Model;
+using bysprojee.Service;
+using Microsoft.AspNetCore.Mvc;
 
 
 

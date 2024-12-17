@@ -1,8 +1,11 @@
-﻿using Microsoft.AspNetCore.Cors.Infrastructure;
+﻿using bysprojee.Service;
+using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 
 namespace bysprojee.Controller
 {
+    [ApiController]
+    [Route("api/[controller]")]
     public class CourseController: ControllerBase
     {
         private readonly CourseService _courseService;
