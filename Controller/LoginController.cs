@@ -14,7 +14,7 @@ namespace bysprojee.Controller
         [HttpPost]
         public async Task<IActionResult> Authenticate(string Student_ID,string Password)
         {
-
+            
         }
     }
 }
