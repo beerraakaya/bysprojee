@@ -9,6 +9,5 @@ namespace bysprojee.Repository
         Task<Student> AddStudentAsync(Student student);//yeni öğrenci ekle
         Task<Student> UpdateStudentAsync(Student student);//öğrenci bilgilerini güncelle
         Task<Student> DeleteStudentAsync(int id);//öğrenci sil
-
     }
 }

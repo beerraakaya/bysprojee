@@ -55,6 +55,6 @@ namespace bysprojee.Controller
             if (deletedStudent == null) return NotFound();
             return Ok(deletedStudent);
         }
-
+    
     }
 }
