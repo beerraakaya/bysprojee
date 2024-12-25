@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace bysprojee.Repository
 {
-    public class StudentRepository
+    public class StudentRepository:IStudentRepository
     {
         private readonly AppDbContext _context;
         public StudentRepository(AppDbContext context)
@@ -42,6 +42,15 @@ namespace bysprojee.Repository
             }
             return student;
         }
+        public async Task<List<Course>> GetStudentCoursesAsync(int studentId)
+        {
+            var studentCourses = await _context.StudentCourses
+                .Where(sc => sc.Student_ID == studentId)
+                .Select(sc => sc.Course)
+                .ToListAsync();
+            return studentCourses;
+        }
+
 
 
     }

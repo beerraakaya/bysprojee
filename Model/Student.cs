@@ -23,7 +23,9 @@ namespace bysprojee.Model
         [Required]
         public string Password { get; set; }
 
-        public string Major { get; set; }
+        public string Username{ get; set; }
+
+        public ICollection<StudentCourse> StudentCourses { get; set; }
 
         public List<Course> CoursesSelected { get; set; } = new List<Course>();
 

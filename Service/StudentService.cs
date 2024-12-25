@@ -8,7 +8,7 @@ namespace bysprojee.Service
     public class StudentService
     {
         private readonly IStudentRepository _studentRepository;
-
+        
         public StudentService(IStudentRepository studentRepository)
         {
             _studentRepository = studentRepository;
@@ -33,14 +33,7 @@ namespace bysprojee.Service
         {
             return await _studentRepository.DeleteStudentAsync(id);
         }
-        public async Task<bool> AuthenticateUserAsync(int username, string password)
-        {
-            // Kullanıcıyı veritabanında kontrol edin.
-            var user = await context.Students
-                .FirstOrDefaultAsync(s => s.Student_ID== username && s.Password == password);
-
-            return user != null; // Kullanıcı bulunursa true döner.
-        }
+       
 
     }
 }

@@ -11,6 +11,10 @@ namespace bysprojee.Service
         {
             _courseRepository = courseRepository;
         }
+        public List<Course> GetCourses()
+        {
+            return new List<Course>();
+        }
         public async Task<IEnumerable<Course>> GetCoursesAsync()
         {
             return await _courseRepository.GetCoursesAsync();
